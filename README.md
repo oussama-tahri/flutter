@@ -308,38 +308,46 @@ class _MyHomePageState extends State<MyHomePage> {
 9. **`@override Widget build(BuildContext context) {`**: Implémentation de la méthode `build` qui retourne la structure de l'interface utilisateur de la page d'accueil.
 
 10. **`return Scaffold(`**: Crée un Scaffold, la structure de base pour les pages.
+    
+### `return Scaffold` :
 
-11. **`appBar: AppBar(`**: Définit la barre d'applications.
+10.1. **Contexte :**
+   - Utilisé pour créer la structure globale d'une page ou d'une interface utilisateur.
 
-12. **`backgroundColor: Theme.of(context).colorScheme.inversePrimary,`**: Définit la couleur de fond de la barre d'applications.
+10.2. **Emplacement :**
+   - `Scaffold` englobe généralement tout l'écran et contient des éléments tels que la barre d'applications, le corps de la page, le tiroir (drawer), etc.
 
-13. **`title: Text(widget.title),`**: Affiche le titre de la page d'accueil dans la barre d'applications.
+12. **`appBar: AppBar(`**: Définit la barre d'applications.
 
-14. **`),`**: Fermeture de la barre d'applications.
+13. **`backgroundColor: Theme.of(context).colorScheme.inversePrimary,`**: Définit la couleur de fond de la barre d'applications.
 
-15. **`drawer: const MenuBarre(),`**: Ajoute un tiroir de navigation (drawer) avec le widget `MenuBarre`.
+14. **`title: Text(widget.title),`**: Affiche le titre de la page d'accueil dans la barre d'applications.
 
-16. **`body: const Center(`**: Définit le corps de la page.
+15. **`),`**: Fermeture de la barre d'applications.
 
-17. **`child: Column(`**: Crée une colonne d'éléments centrés.
+16. **`drawer: const MenuBarre(),`**: Ajoute un tiroir de navigation (drawer) avec le widget `MenuBarre`.
 
-18. **`Text(`**: Affiche un message de bienvenue.
+17. **`body: const Center(`**: Définit le corps de la page.
 
-19. **`),`**: Fermeture de la colonne.
+18. **`child: Column(`**: Crée une colonne d'éléments centrés.
 
-20. **`),`**: Fermeture du Centre.
+19. **`Text(`**: Affiche un message de bienvenue.
 
-21. **`floatingActionButton: FloatingActionButton(`**: Ajoute un bouton d'action.
+20. **`),`**: Fermeture de la colonne.
 
-22. **`onPressed: _incrementCounter,`**: Associe la fonction `_incrementCounter` à l'appui du bouton.
+21. **`),`**: Fermeture du Centre.
 
-23. **`tooltip: 'Increment',`**: Tooltip du bouton.
+22. **`floatingActionButton: FloatingActionButton(`**: Ajoute un bouton d'action.
 
-24. **`child: const Icon(Icons.add),`**: Icône du bouton.
+23. **`onPressed: _incrementCounter,`**: Associe la fonction `_incrementCounter` à l'appui du bouton.
 
-25. **`),`**: Fermeture du FloatingActionButton.
+24. **`tooltip: 'Increment',`**: Tooltip du bouton.
 
-26. **`);`**: Fermeture du Scaffold.
+25. **`child: const Icon(Icons.add),`**: Icône du bouton.
+
+26. **`),`**: Fermeture du FloatingActionButton.
+
+27. **`);`**: Fermeture du Scaffold.
 
 ### MenuBarre.dart:
 
@@ -422,27 +430,36 @@ Image: AssetImage('assets/ai.jpg')),
 
 5. **`return Drawer(`**: Crée un widget Drawer.
 
-6. **`backgroundColor: Colors.grey,`**: Définit la couleur de fond du tiroir.
+### `return Drawer` :
 
-7. **`child: ListView(`**: Crée une liste d'éléments dans le tiroir.
+5.1. **Contexte :**
+   - Utilisé pour créer un volet latéral (tiroir) qui s'ouvre depuis le bord gauche de l'écran.
 
-8. **`const DrawerHeader(`**: En-tête du tiroir avec une image.
+5.2. **Emplacement :**
+   - Souvent utilisé comme contenu du paramètre `drawer` dans un widget `Scaffold`.
 
-9. **`CircleAvatar(backgroundImage: AssetImage('assets/ai.jpg')),`**: Affiche une image dans l'en-tête.
 
-10. **`),`**: Fermeture de l'en-tête.
+7. **`backgroundColor: Colors.grey,`**: Définit la couleur de fond du tiroir.
 
-11. **`Column(`**: Crée une colonne d'éléments dans le tiroir.
+8. **`child: ListView(`**: Crée une liste d'éléments dans le tiroir.
 
-12. **`ListTile(`**: Élément du tiroir pour la page d'accueil.
+9. **`const DrawerHeader(`**: En-tête du tiroir avec une image.
 
-13. **`ExpansionTile(`**: Élément du tiroir pour choisir un algorithme.
+10. **`CircleAvatar(backgroundImage: AssetImage('assets/ai.jpg')),`**: Affiche une image dans l'en-tête.
 
-14. **`ListTile(`**: Sous-élément pour Fashion Mnist.
+11. **`),`**: Fermeture de l'en-tête.
 
-15. **`ListTile(`**: Sous-élément pour Waste Classification.
+12. **`Column(`**: Crée une colonne d'éléments dans le tiroir.
 
-16. **`),`**: Fermeture du tiroir.
+13. **`ListTile(`**: Élément du tiroir pour la page d'accueil.
+
+14. **`ExpansionTile(`**: Élément du tiroir pour choisir un algorithme.
+
+15. **`ListTile(`**: Sous-élément pour Fashion Mnist.
+
+16. **`ListTile(`**: Sous-élément pour Waste Classification.
+
+17. **`),`**: Fermeture du tiroir.
 
 ### loadimage.dart et loadimage2.dart:
 
